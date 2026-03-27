@@ -1,0 +1,26 @@
+{
+  "name": "electron-project",
+  "version": "1.0.0",
+  "description": "League Ghost Mode Utility",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "build": {
+    "appId": "me.mohsumzadah.leagueghost",
+    "win": {
+      "target": "nsis",
+      "requestedExecutionLevel": "requireAdministrator"
+    }
+  },
+  "keywords": [],
+  "author": "Mohsum",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "electron": "^30.0.0",
+    "electron-builder": "^24.13.3"
+  }
+}

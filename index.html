@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="title-bar">
+        <div class="drag-region">League Ghost</div>
+        <button id="closeBtn" class="control-btn">×</button>
+    </div>
+
+    <div class="container">
+        <h1>League <span>Ghost</span></h1>
+
+        <div class="button-group">
+            <button id="ghostBtn" class="btn ghost-btn">Go Ghost</button>
+            <button id="onlineBtn" class="btn online-btn">Go Online</button>
+        </div>
+
+        <div class="status-wrapper">
+            <p id="status">Status: <span>Idle</span></p>
+        </div>
+    </div>
+
+    <script>
+        const { ipcRenderer } = require('electron');
+
+        document.getElementById('ghostBtn').addEventListener('click', () => {
+            ipcRenderer.send('toggle-ghost', true);
+        });
+
+        document.getElementById('onlineBtn').addEventListener('click', () => {
+            ipcRenderer.send('toggle-ghost', false);
+        });
+
+        document.getElementById('closeBtn').addEventListener('click', () => {
+            window.close(); // Closes the app
+        });
+
+        ipcRenderer.on('status-response', (event, message) => {
+            const statusSpan = document.querySelector('#status span');
+            statusSpan.innerText = message;
+
+            // Change color based on status
+            if (message.includes("Active")) statusSpan.style.color = "#a855f7";
+            if (message.includes("Online")) statusSpan.style.color = "#22c55e";
+            if (message.includes("Error")) statusSpan.style.color = "#ef4444";
+        });
+    </script>
+</body>
+
+</html>

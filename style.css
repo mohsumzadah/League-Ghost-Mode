@@ -1,0 +1,135 @@
+:root {
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --accent: #a855f7;
+    --text-main: #f8fafc;
+    --text-dim: #94a3b8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #334155;
+    /* Subtle border for frameless look */
+}
+
+/* Draggable Header */
+.title-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1e293b;
+    height: 32px;
+    padding: 0 10px;
+    -webkit-app-region: drag;
+    /* MAGIC: Makes it draggable */
+}
+
+.drag-region {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-dim);
+}
+
+.control-btn {
+    -webkit-app-region: no-drag;
+    background: transparent;
+    border: none;
+    color: var(--text-dim);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.control-btn:hover {
+    color: #ef4444;
+}
+
+/* Main Content Centering */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 28px;
+    margin-bottom: 25px;
+    letter-spacing: -1px;
+}
+
+h1 span {
+    color: var(--accent);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* Button Styling */
+.btn {
+    -webkit-app-region: no-drag;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    min-width: 140px;
+}
+
+.ghost-btn {
+    background: var(--accent);
+    color: white;
+    box-shadow: 0 4px 15px rgba(168, 85, 247, 0.3);
+}
+
+.ghost-btn:hover {
+    background: #9333ea;
+    transform: translateY(-2px);
+}
+
+.online-btn {
+    background: #334155;
+    color: white;
+}
+
+.online-btn:hover {
+    background: #475569;
+    transform: translateY(-2px);
+}
+
+/* Status Indicator */
+.status-wrapper {
+    background: rgba(30, 41, 59, 0.5);
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+}
+
+#status {
+    font-size: 14px;
+    color: var(--text-dim);
+}
+
+#status span {
+    font-weight: 600;
+    color: var(--text-main);
+}
