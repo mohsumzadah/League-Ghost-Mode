@@ -24,12 +24,7 @@
 ### 🖥️ Main Dashboard
 *A clean, minimalist interface to manage your visibility status with a single click.*
 
-![Main Interface](https://raw.githubusercontent.com/mohsumzadah/League-Ghost-Mode/main/screenshots/main_app.png)
-
-### 🎮 In-Client Effect
-*How the League Client looks when Ghost Mode is active (Chat disconnected, Play button available).*
-
-![Client Status](https://raw.githubusercontent.com/mohsumzadah/League-Ghost-Mode/main/screenshots/client_preview.png)
+![Main Interface]([https://raw.githubusercontent.com/mohsumzadah/League-Ghost-Mode/main/screenshots/main_app.png](https://raw.githubusercontent.com/mohsumzadah/League-Ghost-Mode/refs/heads/main/screenshot.png))
 
 ---
 
