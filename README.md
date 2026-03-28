@@ -23,8 +23,7 @@
 
 ### 🖥️ Main Dashboard
 *A clean, minimalist interface to manage your visibility status with a single click.*
-
-![Main Interface]([https://raw.githubusercontent.com/mohsumzadah/League-Ghost-Mode/main/screenshots/main_app.png](https://raw.githubusercontent.com/mohsumzadah/League-Ghost-Mode/refs/heads/main/screenshot.png))
+![App Screenshot](https://raw.githubusercontent.com/mohsumzadah/League-Ghost-Mode/refs/heads/main/screenshot.png)
 
 ---
 
